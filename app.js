@@ -75,38 +75,29 @@ else if(input == "u"){
     let input3 = prompt('update thông tin:')
     for(let i = 0; i < DSNV.length; i++){
         if (input3 == DSNV[i].id){
-            let Name = prompt("Enter new name")
+            let Name = prompt("nhập tên mới")
             DSNV[i].name = Name
+            let Age = prompt("nhập tuổi mới")
+            DSNV[i].age = Age
+            let Cost = prompt("nhập lương mới")
+            DSNV[i].cost = Cost
         }
     }
     console.log(DSNV)
 }
+else if(input == "d"){
+let input4 = prompt("xóa dữ liệu")
+for(let i = 0; i <DSNV.length ; i++){
+    if(input4 == DSNV[i].id){
+        delete DSNV[i].name
+        delete DSNV[i].id
+        delete DSNV[i].cost
+        }
+    } 
+    console.log(DSNV)       
+}
 
-    // else if(user == "c"){
-    //     let user2 = prompt("Enter the name of the new item")
-    //     Menu.push({id: `${Number(Menu.length) + 1}`,
-    //      QA: `${user2}`})
-    // }
-//     else if(user == "u"){
-//         let user3 = prompt("Enter the position you want update")
-//         for(let i = 0; i < Menu.length ; i++){
-//             if(user3 == Menu[i].id){
-//                 let Name = prompt("Enter new name")
-//                 Menu[i].QA = Name
-//             }
-//         }
-//     }
-//     else if(user == "d"){
-//         let user4 = prompt("Enter the position you want delete")
-//         for(let i = 0; i < Menu.length ; i++){
-//             if(user4 == Menu[i].id){
-//                 delete Menu[i].QA
-//                 delete Menu[i].id
-//             }
-//         }        
-//     }
-//     else if(user == "q") break
-// }
+
 
 
 
